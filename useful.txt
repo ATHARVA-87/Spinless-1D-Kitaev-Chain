@@ -1,0 +1,72 @@
+LD_PRELOAD="" LD_LIBRARY_PATH="" tmux attach -t mzm_gen
+
+run 
+python main.py \
+  --h5_file "/home/levi/anaconda3/envs/mzm/project_mzm/kitaev_chain_dataset_with_less_eigsts/kitaev_chain_dataset_200000_30000.h5" \
+  --output_dir "/home/levi/anaconda3/envs/mzm/project_mzm/trained_model" \
+  --batch_size 256 \
+  --num_epochs 100 \
+  --early_stopping 10 \
+  --lambda_eig 1.0 \
+  --num_workers 4
+
+
+  debug
+  python main.py \
+  --h5_file "/home/levi/anaconda3/envs/mzm/project_mzm/kitaev_chain_dataset_with_less_eigsts/kitaev_chain_dataset_200000_30000.h5" \
+  --output_dir "/home/levi/anaconda3/envs/mzm/project_mzm/trained_model" \
+  --debug
+
+python main.py \
+    --h5_file "/home/levi/anaconda3/envs/mzm/project_mzm/kitaev_chain_dataset_with_less_eigsts/kitaev_chain_dataset_200000_30000.h5" \
+    --batch_size 1024 \
+    --num_epochs 200 \
+    --lambda_eig 1.5 \
+    --lambda_spectral 0.3 \
+    --hidden_dim1 1024 \
+    --hidden_dim2 2048 \
+    --experiment_name custom_architecture
+
+
+test
+python main.py \
+  --h5_file "/home/levi/anaconda3/envs/mzm/project_mzm/kitaev_chain_dataset_with_less_eigsts/kitaev_chain_dataset_200000_30000.h5" \
+  --output_dir "/home/levi/anaconda3/envs/mzm/project_mzm/trained_model" \
+  --no_train \
+  --model_path "/home/levi/anaconda3/envs/mzm/project_mzm/trained_model/run_20250509_123456/best_model.pth"
+
+python main.py \
+    --h5_file data/bdg_simulations.h5 \
+    --model_path output/previous_run/best_model.pth \
+    --no_train
+
+
+
+visualisation
+python make_plots.py \
+  /home/levi/anaconda3/envs/mzm/project_mzm/kitaev_chain_dataset_old/kitaev_chain_dataset_200000_30000.h5 \
+  --save_dir /home/levi/anaconda3/envs/mzm/project_mzm/visualisation_plots
+
+
+python make_plots.py /home/levi/anaconda3/envs/mzm/project_mzm/kitaev_chain_dataset_old/kitaev_chain_dataset_200000_30000.h5 --sample_size 5000 --save_dir /home/levi/anaconda3/envs/mzm/project_mzm/visualisation_plots
+
+python make_plots.py /home/levi/anaconda3/envs/mzm/project_mzm/kitaev_chain_dataset_old/kitaev_chain_dataset_200000_30000.h5 --sample_size 5000 --save_dir /home/levi/anaconda3/envs/mzm/project_mzm/visualisation_plots --num_bins 50
+
+
+
+
+Test Results:
+Loss: 0.0681
+Edge Localization MSE: 0.0667
+Eigenvalue MSE: 0.0014
+Edge Accuracy: 0.8878
+Eigenvalue Accuracy: 0.0767
+Overall Accuracy: 0.4822
+OOD Ratio: 0.0000 (0/30000)
+
+Accuracy Metrics Summary:
+Edge Accuracy: 0.8878
+Eigenvalue Accuracy: 0.0767
+Overall Accuracy: 0.4822
+
+Done!

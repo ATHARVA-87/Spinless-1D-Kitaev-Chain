@@ -1,0 +1,5 @@
+2025-05-09 17:10:36,463 - bdg_prediction - INFO - Starting BdG Prediction Pipeline with output directory: output/run_20250509_171036_custom_architecture
+2025-05-09 17:10:36,463 - bdg_prediction - INFO - Random seed set to 42
+2025-05-09 17:10:36,470 - bdg_prediction - INFO - Using device: cuda
+2025-05-09 17:10:36,470 - bdg_prediction - INFO - Creating DataLoaders...
+2025-05-09 17:10:36,470 - bdg_prediction - ERROR - Error creating DataLoaders: get_dataloaders() got an unexpected keyword argument 'train_ratio'

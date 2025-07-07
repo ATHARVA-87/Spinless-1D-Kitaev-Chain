@@ -1,0 +1,5 @@
+2025-05-09 17:42:03,970 - bdg_prediction - INFO - Starting BdG Prediction Pipeline with output directory: output/run_20250509_174203_custom_architecture
+2025-05-09 17:42:03,971 - bdg_prediction - INFO - Random seed set to 42
+2025-05-09 17:42:03,977 - bdg_prediction - INFO - Using device: cuda
+2025-05-09 17:42:03,977 - bdg_prediction - INFO - Creating DataLoaders...
+2025-05-09 17:42:03,977 - bdg_prediction - ERROR - Error creating DataLoaders: BdGDataset.__init__() got an unexpected keyword argument 'group'

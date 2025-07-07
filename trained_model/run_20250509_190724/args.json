@@ -1,0 +1,15 @@
+{
+    "h5_file": "/home/levi/anaconda3/envs/mzm/project_mzm/kitaev_chain_dataset_with_less_eigsts/kitaev_chain_dataset_200000_30000.h5",
+    "output_dir": "/home/levi/anaconda3/envs/mzm/project_mzm/trained_model/run_20250509_190724",
+    "batch_size": 4096,
+    "num_epochs": 200,
+    "early_stopping": 10,
+    "lambda_eig": 1.0,
+    "num_workers": 8,
+    "seed": 42,
+    "debug": false,
+    "no_train": false,
+    "model_path": null,
+    "acc_threshold": 0.5,
+    "eig_tolerance": 0.1
+}

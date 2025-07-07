@@ -1,0 +1,7 @@
+2025-05-09 17:25:27,035 - bdg_prediction - INFO - Starting BdG Prediction Pipeline with output directory: output/run_20250509_172527_custom_architecture
+2025-05-09 17:25:27,036 - bdg_prediction - INFO - Random seed set to 42
+2025-05-09 17:25:27,042 - bdg_prediction - INFO - Using device: cuda
+2025-05-09 17:25:27,042 - bdg_prediction - INFO - Creating DataLoaders...
+2025-05-09 17:25:27,063 - bdg_prediction - INFO - Train samples: 200000
+2025-05-09 17:25:27,063 - bdg_prediction - INFO - Test samples: 30000
+2025-05-09 17:25:27,063 - bdg_prediction - INFO - Creating model...
